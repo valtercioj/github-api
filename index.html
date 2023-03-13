@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/github.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Github</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&amp;family=Raleway:wght@600&amp;display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      #sidebar {
+        --tw-translate-x: -100%;
+      }
+      #menu-close-icon {
+        display: none;
+      }
+
+      #menu-open:checked ~ #sidebar {
+        --tw-translate-x: 0;
+      }
+      #menu-open:checked ~ * #mobile-menu-button {
+        background-color: #04471c;
+      }
+      #menu-open:checked ~ * #menu-open-icon {
+        display: none;
+      }
+      #menu-open:checked ~ * #menu-close-icon {
+        display: block;
+      }
+
+      @media (min-width: 768px) {
+        #sidebar {
+          --tw-translate-x: 0;
+        }
+      }
+    </style>
+  </head>
+  <body class="dark:bg-gray-dark">
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
