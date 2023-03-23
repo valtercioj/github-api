@@ -43,7 +43,7 @@ Projeto criado com o objetivo de praticar o uso do consumo de APIs, criei um pro
 
 ## 🔖 Layout
 
-Você pode visualizar o projeto através [desse link]().
+Você pode visualizar o projeto através [desse link](https://github-api-peach.vercel.app).
 
 ## :memo: Licença
 
