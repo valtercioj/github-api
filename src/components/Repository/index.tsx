@@ -1,11 +1,13 @@
-import { useParams } from "react-router-dom";
-import { IDataUser, IReposityProps } from "./types";
-import { AiFillGithub, AiOutlineStar } from "react-icons/ai";
+import { IDataUser, IReposityProps, IProps } from "./types";
+import { AiFillGithub, AiOutlineStar, AiOutlineBackward } from "react-icons/ai";
 import { useQuery } from "react-query";
 import api from "../../services/api";
 import { toast } from "react-toastify";
-export default function index() {
-  const { user } = useParams();
+import { pageProvider } from "../../App";
+import { useContext } from "react";
+export default function index({ user }: IProps) {
+  const { page, setPage } = useContext(pageProvider);
+
   const {
     data: dataUser,
     isLoading: isLoadingData,
@@ -143,6 +145,17 @@ export default function index() {
                 >
                   Visualizar
                 </a>
+              </div>
+              <div
+                className="mt-4 hover:cursor-pointer bg-green-bg p-2 text-white rounded-lg hover:bg-green-300 flex items-center"
+                onClick={() => {
+                  setPage(page - 1);
+                }}
+              >
+                <span>
+                  <AiOutlineBackward />
+                </span>
+                <span>Voltar</span>
               </div>
             </nav>
           )}

@@ -15,3 +15,6 @@ export type IDataUser = {
   followers: number;
   following: number;
 };
+export type IProps = {
+  user: string;
+};
